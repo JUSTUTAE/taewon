@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+	<!-- Include the MAVROS node with SITL and Gazebo -->
+<!--	<include file="$(find offboard_cpp)/launch/1uav_launch.launch">
+	</include> -->
+
+	<!-- Our node to control the drone -->
+	<!-- <node pkg="offboard_cpp" type="send_rp0" name="send_traj0" required="true" output="screen" /> -->
+
+	<node pkg="offboard_cpp" type="drone_vel_test" name="uav1_vel_ctrl" required="true" output="screen" />
+
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find offboard_cpp)/uav1.rviz" />
+</launch>
